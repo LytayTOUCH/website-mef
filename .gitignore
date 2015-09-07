@@ -12,3 +12,12 @@
 !/log/.keep
 /tmp
 /documents/.~*
+/public/*
+!/public/404.html
+!/public/422.html
+!/public/500.html
+!/public/favicon.ico
+!/public/robots.txt
+Gemfile.lock
+/db/schema.rb
+*.orig

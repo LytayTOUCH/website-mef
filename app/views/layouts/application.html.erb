@@ -7,8 +7,107 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- containner -->
+<div class="container"> 
+    <div class="row col-md-12">
+        <div class="col-lg-12">
+            <div class="row ">
+              <div class="col-xs-10 col-xs-offset-1 main-container" style="background:#fff;color:white">
+              <!-- main-header -->
+              <div class="main-header" >
+              	<!-- top-header -->
+              	<div class="top-header has-padding color-fore">
+              			top-header
+              			<div class="language-change-box ">
+              					Chang language box
+              			</div>
+              	</div>
+              	<!-- /top-header -->
+              	<!-- header-content -->
+              	<div class="header-content has-padding">
+              			<img src="/assets/logo.png" >
+              	</div>
+              	<!-- /header content -->
 
-<%= yield %>
+              	<!-- main-nav -->
+              	<div class="main-nav ">
+              				<ul>
+              					<li>
+              						<a class="menu-item" href="">menu 1</a>
+              					</li>
+              					<li>
+              						<a class="menu-item" href="">menu 2</a>
+              					</li>
+              					<li>
+              						<a class="menu-item" href="">menu 3</a>
+              					</li>
+              					<li>
+              						<a class="menu-item" href="">menu 4</a>
+              					</li>
+              					<li>
+              						<a class="menu-item" href="">menu 5</a>
+              						<ul>
+              							<li>
+              								<a class="menu-item" href="">sub menu 1</a>
+              							</li>
+
+              							<li>
+              								<a class="menu-item" href="">sub menu 1</a>
+              							</li>
+
+              							<li>
+              								<a class="menu-item" href="">sub menu 1</a>
+              							</li>
+
+              						</ul>
+              					</li>
+
+              				</ul>
+              	</div>
+              	<!-- /main-nav -->
+
+              </div>
+              <!-- /main-header -->
+              <div class="main-content row col-md-12 ">
+              	<div class="content has-padding col-md-9">
+              		<%= yield %>
+              	</div>
+              	<div class="widget-right has-padding col-md-3 color-fore" >
+              			widget right
+              	</div>
+              </div>
+
+              <!-- Main footer -->
+              <div class="main-footer">
+	              <!-- footer-top -->
+	              <div class="footer-top">
+	              	footer-top
+	              </div>	
+	              <!-- /footer-top -->
+              	<!-- footer-content -->
+              		<div class="footer-content background-color-3 has-padding">
+              			hello footer conntent
+              		</div>
+              	<!-- /footer-content -->
+
+              	<!-- bottom-footer -->
+              		<div class="bottom-footer background-color-3 has-padding">
+              			bottom footer
+              		</div>
+              	<!-- /bottom-footer -->
+
+              </div>
+              <!-- /Main footer -->
+
+
+
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /container  -->
+
 
 </body>
 </html>

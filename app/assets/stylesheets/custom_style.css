@@ -1,0 +1,121 @@
+body{
+	background: #eee;
+}
+
+.main-container{
+	padding-left: 0px !important;
+	padding-right:0px !important;
+}
+
+.main-header{
+	background-color: #fff;
+}
+/* top-header */
+
+.top-header{
+	background: #FBFBFA;
+	border-top:2px solid  #75B842;
+	border-bottom: 1px solid	#eee;
+	padding-top:3px !important;
+	padding-bottom: 3px !important;
+}
+.language-change-box{
+	float: right;
+}
+
+
+
+/* top-header */
+
+
+.bottom-header{
+
+
+}
+.header-conent{
+	background-color: #fff;
+}
+.main-nav{
+	background: #0D7C3E;
+	border-bottom: 3px solid #926B28;
+}
+.main-nav ul{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+
+.main-nav ul li{
+	display: inline;
+	color: #fff;
+}
+.menu-item:hover{
+	background: #926B28;
+}
+
+.main-nav ul li ul{
+	display: none;
+}
+
+
+/* footer */
+.main-footer{
+
+}
+.top-footer{
+
+}
+.bottom-footer{
+	border-top: 1px solid #fff;
+	padding-top:1px !important;
+	padding-bottom: 1px  !important;
+
+}
+.footer-content{
+	border-top: 5px solid #0D7C3E;
+}
+
+/* footer */
+
+
+/* overide class*/
+ul, ol{
+	margin-bottom: 0px !important;
+	padding-left: 0px !important;
+}
+
+
+/* over load style config */
+
+/*
+
+*/
+
+.has-padding, .has-padding-10{
+	padding:10px;
+}
+.has-padding-5{
+	padding:5px;
+}
+
+.color-fore{
+	color: #0D7C3E !important;
+}
+.color-fore-2{
+	color: #75B842;
+}
+.color-fore-2{
+	color: #926B28;
+}
+.background-color-fore{
+	background-color: #0D7C3E !important; 
+}
+.background-color-2{
+	background-color: #75B842;
+}
+.background-color-3{
+	background-color: #926B28;
+}
+
+
+

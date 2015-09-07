@@ -54,7 +54,8 @@
   <%= f.input :title, label: 'Title' %>
   <%= f.input :description, label: 'Description' %>
   <%= f.input :entity, label: 'Entity' %>
-  <%= f.input :bidding_expired_date, label: 'Bidding Expired Date' %>
+  <%= f.input :bidding_expired_date, label: 'Bidding Expired Date', as: :datetime_picker %>
   <%= f.input :budget_source, label: 'Budget Source' %>
   <%= f.button :submit, label: 'Create Announcement' %>
 <% end %>
+

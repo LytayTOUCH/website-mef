@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150907040628) do
+ActiveRecord::Schema.define(version: 20150907073809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "announcements", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "entity"
+    t.date     "bidding_expired_date"
+    t.float    "budget_source"
+    t.string   "attachment"
+    t.string   "bidding_attachment"
+    t.integer  "procurement_type_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "announcements", ["procurement_type_id"], name: "index_announcements_on_procurement_type_id", using: :btree
+
+  create_table "procurement_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,4 +55,5 @@ ActiveRecord::Schema.define(version: 20150907040628) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "announcements", "procurement_types"
 end

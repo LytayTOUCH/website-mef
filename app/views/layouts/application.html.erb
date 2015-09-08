@@ -12,7 +12,7 @@
     <div class="row col-md-12">
         <div class="col-lg-12">
             <div class="row ">
-              <div class="col-xs-10 col-xs-offset-1 main-container" style="background:#fff;color:white">
+              <div class="col-xs-10 col-xs-offset-1 main-container" style="">
               <!-- main-header -->
               <div class="main-header" >
               	<!-- top-header -->
@@ -31,50 +31,51 @@
 
               	<!-- main-nav -->
               	<div class="main-nav ">
-              				<ul>
-              					<li>
-              						<a class="menu-item" href="">menu 1</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 2</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 3</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 4</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 5</a>
-              						<ul>
-              							<li>
-              								<a class="menu-item" href="">sub menu 1</a>
-              							</li>
+              				<div id='cssmenu'>
+                        <ul>
+                           <li class='active '><a href='#'><span>Home</span></a></li>
+                           <li class='has-sub' ><a href='#'><span>Products</span></a>
+                              <ul>
+                                 <li class='has-sub'><a href='#'><span>Product 1</span></a>
+                                    <ul>
+                                       <li><a href='#'><span>Sub Product</span></a></li>
+                                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                    </ul>
+                                 </li>
+                                 <li class='has-sub'><a href='#'><span>Product 2</span></a>
+                                    <ul>
+                                       <li><a href='#'><span>Sub Product</span></a></li>
+                                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li><a href='#'><span>About</span></a></li>
+                           <li class='last'><a href='#'><span>Contact</span></a></li>
+                        </ul>
+                        </div>
 
-              							<li>
-              								<a class="menu-item" href="">sub menu 1</a>
-              							</li>
 
-              							<li>
-              								<a class="menu-item" href="">sub menu 1</a>
-              							</li>
-
-              						</ul>
-              					</li>
-
-              				</ul>
               	</div>
               	<!-- /main-nav -->
 
               </div>
-              <!-- /main-header -->
-              <div class="main-content row col-md-12 ">
-              	<div class="content has-padding col-md-9">
-              		<%= yield %>
-              	</div>
-              	<div class="widget-right has-padding col-md-3 color-fore" >
-              			widget right
-              	</div>
+                <!-- /main-header -->
+
+                <div class="col-md-12 no-padding background-color-white ">
+                <div class="main-content ">
+                	<div class="content  col-md-9">
+                		<%= yield %>
+                	</div>
+                	<!-- widget right -->
+                  <div class="widget-right has-padding col-md-3 color-fore" >
+                			<div class="widget-box">
+                          <h2>wedget site bar box</h2>
+                          <p> helloworod </p>
+                      </div>
+                	</div>
+                </div>
+
               </div>
 
               <!-- Main footer -->

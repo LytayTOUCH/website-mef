@@ -19,24 +19,24 @@ class AnnouncementsController < ApplicationController
   def create
     @announcements = Announcement.new(announcement_params)
     if @announcements.save
-      redirect_to :index
+      redirect_to announcements_path
     else
-      render :new
+      render 'new'
     end
   end
 
   def destroy
     @announcements.destroy
     
-    redirect_to :index
+    redirect_to announcements_path
   end
 
   def update
     @announcements = Announcement.find(params[:id])
     if @announcements.update_attributes(announcement_params)
-      redirect_to :index
+      redirect_to announcements_path
     else
-      render :edit
+      render 'edit'
     end
   end
 

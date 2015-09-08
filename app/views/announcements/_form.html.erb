@@ -1,44 +1,4 @@
-<!--
-<%= form_for(@announcements) do |f| %>
-  <% if @announcements.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@announcements.errors.count, "error") %> prohibited this announcement from being saved:</h2>
-
-      <ul>
-      <% @announcements.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :entity %><br>
-    <%= f.text_field :entity %>
-  </div>
-  <div class="field">
-    <%= f.label :bidding_expired_date %><br>
-    <%= f.text_area :bidding_expired_date %>
-  </div>
-  <div class="field">
-    <%= f.label :budget_source %><br>
-    <%= f.datetime_select :budget_source %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
--->
-
-<%= simple_form_for @announcements do |f| %>
+<%= simple_form_for @announcements, url: announcements_path do |f| %>
   <% if @announcements.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@announcements.errors.count, "error") %> prohibited this announcement from being saved:</h2>
@@ -54,8 +14,10 @@
   <%= f.input :title, label: 'Title' %>
   <%= f.input :description, label: 'Description' %>
   <%= f.input :entity, label: 'Entity' %>
-  <%= f.input :bidding_expired_date, label: 'Bidding Expired Date', as: :datetime_picker %>
+  <%= f.input :bidding_expired_date, label: 'Bidding Expired Date', as: :date_picker %>
   <%= f.input :budget_source, label: 'Budget Source' %>
+  <%= f.input :attachment, label: 'Attachment File', as: :file %>
+  <%= f.input :bidding_attachment, label: 'Bidding Attachment File', as: :file %>
   <%= f.button :submit, label: 'Create Announcement' %>
 <% end %>
 

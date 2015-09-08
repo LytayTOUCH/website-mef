@@ -22,11 +22,17 @@ ActiveRecord::Schema.define(version: 20150907073809) do
     t.string   "entity"
     t.date     "bidding_expired_date"
     t.float    "budget_source"
-    t.string   "attachment"
-    t.string   "bidding_attachment"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.string   "bidding_attachment_file_name"
+    t.string   "bidding_attachment_content_type"
+    t.integer  "bidding_attachment_file_size"
+    t.datetime "bidding_attachment_updated_at"
     t.integer  "procurement_type_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "announcements", ["procurement_type_id"], name: "index_announcements_on_procurement_type_id", using: :btree

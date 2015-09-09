@@ -1,10 +1,10 @@
-<%= simple_form_for @announcements, url: announcements_path do |f| %>
-  <% if @announcements.errors.any? %>
+<%= simple_form_for @announcement do |f| %>
+  <% if @announcement.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@announcements.errors.count, "error") %> prohibited this announcement from being saved:</h2>
 
       <ul>
-      <% @announcements.errors.full_messages.each do |message| %>
+      <% @announcement.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

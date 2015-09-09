@@ -17,10 +17,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: sakada
-  password: clroot0987
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  host: <%= ENV['HOST'] %>
   pool: 5
 
 development:
@@ -83,5 +84,5 @@ test:
 production:
   <<: *default
   database: mefsite_production
-  username: mefsite
-  password: <%= ENV['MEFSITE_DATABASE_PASSWORD'] %>
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>

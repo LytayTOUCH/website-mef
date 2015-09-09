@@ -1,48 +1,80 @@
 class AnnouncementsController < ApplicationController
+  before_action :set_announcement, only: [:show, :edit, :delete, :destroy]
 
   def index
     @announcements = Announcement.all
   end
 
   def edit
-    @announcement = Announcement.find(params[:id])
+    
   end
 
   def show
-    @announcement = Announcement.find(params[:id])
+    
   end
 
   def new
-    @announcements = Announcement.new
+    @announcement = Announcement.new
   end
 
   def create
-    @announcements = Announcement.new(announcement_params)
-    if @announcements.save
-      redirect_to :index
+    @announcement = Announcement.new(announcement_params)
+    if @announcement.save
+      redirect_to announcements_path
     else
-      render :new
+      render 'new'
     end
   end
 
   def destroy
-    @announcements.destroy
-    
-    redirect_to :index
+    @announcement.destroy
+    redirect_to announcements_path
   end
 
   def update
-    @announcements = Announcement.find(params[:id])
-    if @announcements.update_attributes(announcement_params)
-      redirect_to :index
+    @announcement = Announcement.find(params[:id])
+    if @announcement.update_attributes(announcement_params)
+      if @announcement.remove_attachment == true
+        @announcement.attachment = nil
+        @announcement.save
+      end
+      if @announcement.remove_bidding_attachment == true
+        @announcement.bidding_attachment = nil
+        @announcement.save
+      end
+      redirect_to announcements_path
     else
-      render :edit
+      render 'edit'
     end
   end
 
+  def delete_attachment
+    @announcement = Announcement.find_by_id(params[:id])
+    @announcement.attachment = nil
+    if @announcement.save
+      redirect_to announcements_path
+    else
+      render 'new'
+    end
+  end
+
+  def delete_bidding_attachment
+    @announcement = Announcement.find_by_id(params[:id])
+    @announcement.bidding_attachment = nil
+    if @announcement.save
+      redirect_to announcements_path
+    else
+      render 'new'
+    end
+  end
+  
   private
+  def set_announcement
+    @announcement = Announcement.find(params[:id])
+  end
+
   def announcement_params
-    params.require(:announcement).permit(:titile, 
+    params.require(:announcement).permit(:title, 
       :description, :entity, :bidding_expired_date, 
       :budget_source, :attachment, :bidding_attachment)
   end

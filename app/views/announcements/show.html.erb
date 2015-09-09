@@ -1,2 +1,13 @@
 <h1>Announcements#show</h1>
 <p>Find me in app/views/announcements/show.html.erb</p>
+
+<label>Title</label><%= @announcement.title %><br/>
+<label>Description</label><%= @announcement.description %><br/>
+<label>Entity</label><%= @announcement.entity %><br/>
+<label>Bidding Expired Date</label><%= @announcement.bidding_expired_date %><br/>
+<label>Budget Source</label><%= @announcement.budget_source %><br/>
+<label>Attachment</label><%= @announcement.attachment_file_name %><br/>
+<label>Bidding Attachment</label><%= @announcement.bidding_attachment_file_name %><br/>
+
+<%= link_to "Edit", edit_announcement_path(@announcement) %>
+<%= link_to "Back", announcements_path %>

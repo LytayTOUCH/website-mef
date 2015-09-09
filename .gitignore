@@ -21,3 +21,4 @@
 /Gemfile.lock
 /db/schema.rb
 *.orig
+/config/application_db_config.yml

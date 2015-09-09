@@ -31,5 +31,14 @@ module Mefsite
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    #Add Custom of application.yml
+    config.before_configuration do
+      env_file = Rails.root.join("config", 'application_db_config.yml').to_s
+      YAML.load_file(env_file)[Rails.env].each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
+
   end
 end

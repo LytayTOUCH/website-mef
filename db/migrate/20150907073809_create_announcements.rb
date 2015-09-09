@@ -6,8 +6,8 @@ class CreateAnnouncements < ActiveRecord::Migration
       t.string :entity
       t.date :bidding_expired_date
       t.float :budget_source
-      t.string :attachment
-      t.string :bidding_attachment
+      t.attachment :attachment
+      t.attachment :bidding_attachment
       t.references :procurement_type, index: true, foreign_key: true
 
       t.timestamps null: false

@@ -1,0 +1,18 @@
+# Rename this file into "application_db_config.yml"
+# Modify this file based on your database system configuration.
+
+database_account: &database_account
+  HOST: localhost_sample
+  USERNAME: root_user_sample
+  PASSWORD: password_sample
+
+development:
+  <<: *database_account
+
+test:
+  <<: *database_account
+
+production:
+  PRODUCTION_USERNAME: production_host
+  PRODUCTION_PASSWORD: production_password
+  SECRET_KEY_BASE: production_secret

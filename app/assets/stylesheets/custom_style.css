@@ -8,6 +8,7 @@
 }
 
 
+
 *{
 	/*color: #000;*/
 	font-family: 'khmer content';
@@ -144,6 +145,9 @@ ul, ol{
 .color-black{
 	color: #000;
 }
+.color-danger{
+	color: red;
+}
 .background-color-fore{
 	background-color: #0D7C3E !important; 
 }
@@ -250,18 +254,14 @@ display: block;
 }
 
 
-
-
-
-
 /*  Tabe Customize */
 
-table	{
+/*table	{
 	@extend .col-md-12;
 	@extend .table-bordered;
 	@extend .table-hover ;
 	@extend .table-responsive;
-}
+}*/
 
 .white-link-item{
 	color: #ccc;
@@ -274,7 +274,7 @@ table	{
 	@extend .color-white;
 }
 
-.dropdown-menu{
+li .dropdown-menu{
 	@extend .background-color-3;
 }
 

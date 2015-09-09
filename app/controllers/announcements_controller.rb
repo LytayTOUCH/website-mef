@@ -34,14 +34,6 @@ class AnnouncementsController < ApplicationController
   def update
     @announcement = Announcement.find(params[:id])
     if @announcement.update_attributes(announcement_params)
-      if @announcement.remove_attachment == true
-        @announcement.attachment = nil
-        @announcement.save
-      end
-      if @announcement.remove_bidding_attachment == true
-        @announcement.bidding_attachment = nil
-        @announcement.save
-      end
       redirect_to announcements_path
     else
       render 'edit'

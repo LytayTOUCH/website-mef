@@ -11,3 +11,14 @@
 /log/*
 !/log/.keep
 /tmp
+Gemfile.lock
+/db/schema.rb
+/public/*
+!/public/404.html
+!/public/422.html
+!/public/500.html
+!/public/favicon.ico
+!/public/robots.txt
+
+# Ignore application configuration
+/config/application.yml

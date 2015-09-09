@@ -48,7 +48,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 # gem 'sass-rails', github: 'rails/sass-rails'
 gem 'autoprefixer-rails'
 
-
+gem "font-awesome-rails"
 
 
 

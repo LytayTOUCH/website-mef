@@ -20,6 +20,10 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 
+
+//= require dataTables/jquery.dataTables
+
+
 // This Javascript is for datetime.picker
 $(document).on('ready page:change', function() {
   $('.datetimepicker').datetimepicker({

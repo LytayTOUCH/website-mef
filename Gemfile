@@ -50,7 +50,7 @@ gem 'autoprefixer-rails'
 
 gem "font-awesome-rails"
 
-
+gem 'jquery-datatables-rails', '~> 3.3.0'
 
 
 group :development, :test do

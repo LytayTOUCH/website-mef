@@ -290,3 +290,9 @@ li .dropdown-menu{
 	@extend .background-color-2;
 }
 
+/*Admin Style */
+
+.fixed{
+	position: fixed !important;
+	
+}

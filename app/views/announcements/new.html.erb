@@ -1,6 +1,24 @@
-<h1>Announcements#new</h1>
-<p>Find me in app/views/announcements/new.html.erb</p>
+<!-- <h1>Announcements#new</h1>
+<p>Find me in app/views/announcements/new.html.erb</p> -->
 
-<%= render 'form',  :locals => @announcements %>
+<!-- <div class="col-md-12" >
+	<div class="background-color-2 has-padding color-white " style="margin-top:5px;" >
+	 Article Title 
+	Add new Procurement
+	</div>
+	<br>
 
-<%= link_to 'Back', announcements_path %>
+	
+</div> -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">បន្ថែមសេចក្តីប្រកាស់ថ្មី</div>
+  <div class="panel-body">
+  
+  <%= render 'form',  :locals => @announcements %>
+<div class=" has-padding color-white " style="margin-top:5px; border-top: 1px solid #000 " >
+	<%= link_to 'Back', announcements_path , class: 'btn btn-primary btn-mini' %>	
+</div>
+
+  </div>
+</div>

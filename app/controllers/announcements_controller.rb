@@ -1,6 +1,10 @@
 class AnnouncementsController < ApplicationController
   before_action :set_announcement, only: [:show, :edit, :delete, :destroy]
 
+  layout "admin_application" 
+  # we can use (layout "layout_name", except: [:method, :method])
+
+
   def index
     @announcements = Announcement.all
   end
@@ -14,7 +18,9 @@ class AnnouncementsController < ApplicationController
   end
 
   def new
+
     @announcement = Announcement.new
+
   end
 
   def create
@@ -70,4 +76,5 @@ class AnnouncementsController < ApplicationController
       :description, :entity, :bidding_expired_date, 
       :budget_source, :attachment, :bidding_attachment)
   end
+
 end

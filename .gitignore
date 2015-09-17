@@ -18,7 +18,7 @@
 !/public/500.html
 !/public/favicon.ico
 !/public/robots.txt
-Gemfile.lock
+/Gemfile.lock
 /db/schema.rb
 *.orig
 /config/application_db_config.yml

@@ -1,0 +1,23 @@
+<%= simple_form_for @announcement do |f| %>
+  <% if @announcement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
+
+      <ul>
+      <% @announcement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :title, label: 'Title' %>
+  <%= f.input :description, label: 'Description' %>
+  <%= f.input :entity, label: 'Entity' %>
+  <%= f.input :bidding_expired_date, label: 'Bidding Expired Date', as: :date_picker %>
+  <%= f.input :budget_source, label: 'Budget Source' %>
+  <%= f.input :attachment, label: 'Attachment File', as: :file %>
+  <%= f.input :bidding_attachment, label: 'Bidding Attachment File', as: :file %>
+  <%= f.button :submit, label: 'Create Announcement' %>
+<% end %>
+

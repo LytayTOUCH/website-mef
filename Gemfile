@@ -24,6 +24,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
+
+gem 'simple_form'
+
+gem 'momentjs-rails', '~> 2.9'
+
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+
+gem "paperclip", "~> 4.3"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,7 +48,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 # gem 'sass-rails', github: 'rails/sass-rails'
 gem 'autoprefixer-rails'
 
-
+gem "font-awesome-rails"
 
 
 

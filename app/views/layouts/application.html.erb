@@ -5,105 +5,272 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="shortcut icon" href="/assets/favicon.ico" title="Favicon" />
 </head>
 <body>
 <!-- containner -->
 <div class="container"> 
-    <div class="row col-md-12">
-        <div class="col-lg-12">
-            <div class="row ">
-              <div class="col-xs-10 col-xs-offset-1 main-container" style="background:#fff;color:white">
+    <!-- <div class=" col-md-12"> -->
+        
+            <div class="row has-shadow  ">
+              <div class=" main-container" style="">
               <!-- main-header -->
               <div class="main-header" >
               	<!-- top-header -->
-              	<div class="top-header has-padding color-fore">
-              			top-header
-              			<div class="language-change-box ">
-              					Chang language box
+              	<div class="top-header has-padding color-fore col-md-12">
+              			<div class="col-md-6">
+                          <!-- left    -->
+                    </div>
+              			<div class="language-change-box col-md-6">
+                        
+              					<a href="" title="chang language">
+                          <img src="/assets/kh.png">     
+                        </a>
+                        <a href="" title="chang language">
+                          <img src="/assets/en.png">     
+                        </a>
               			</div>
               	</div>
               	<!-- /top-header -->
               	<!-- header-content -->
-              	<div class="header-content has-padding">
-              			<img src="/assets/logo.png" >
+              	<div class="header-content has-padding ">
+                  
+              			<img  src="/assets/logo.png" class="img-responsive" >
+                  
               	</div>
               	<!-- /header content -->
 
               	<!-- main-nav -->
-              	<div class="main-nav ">
-              				<ul>
-              					<li>
-              						<a class="menu-item" href="">menu 1</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 2</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 3</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 4</a>
-              					</li>
-              					<li>
-              						<a class="menu-item" href="">menu 5</a>
-              						<ul>
-              							<li>
-              								<a class="menu-item" href="">sub menu 1</a>
-              							</li>
+              	<!-- <div class="main-nav "> -->
+              				<!-- <div id='cssmenu'>
+                        <ul>
+                           <li class='active '><a href='#'><span>Home</span></a></li>
+                           <li class='has-sub' ><a href='#'><span>Products</span></a>
+                              <ul>
+                                 <li class='has-sub'><a href='#'><span>Product 1</span></a>
+                                    <ul>
+                                       <li><a href='#'><span>Sub Product</span></a></li>
+                                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                    </ul>
+                                 </li>
+                                 <li class='has-sub'><a href='#'><span>Product 2</span></a>
+                                    <ul>
+                                       <li><a href='#'><span>Sub Product</span></a></li>
+                                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li><a href='#'><span>About</span></a></li>
+                           <li class='last'><a href='#'><span>Contact</span></a></li>
+                        </ul>
+                        </div> -->
+                      
+                      <nav class="navbar navbar-default background-color-fore ">
+                        <div class="container-fluid">
+                          <!-- Brand and toggle get grouped for better mobile display -->
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            
+                          </div>
 
-              							<li>
-              								<a class="menu-item" href="">sub menu 1</a>
-              							</li>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">ទំព័រដើម<span class="sr-only">(current)</span></a></li>
+                              <li class="dropdown"><a href="http://google.com"  role="button" aria-haspopup="true" aria-expanded="false" >ដំណឹងស្តីពីការដេញថ្លៃ</a>
+                                  <ul class="dropdown-menu">
+                                  <li><a href="#">ផ្នែកទំនិញ និងសម្ភារៈ</a></li>
+                                  <li><a href="#">ផ្នែកសំណង់ និងទំហែទាំ</a></li>
+                                  <li><a href="#">ផ្នែកសេវាកម្ម និងការពិគ្រោះយោបល់</a></li>
+                                </ul>
+                              </li>
+                              
 
-              							<li>
-              								<a class="menu-item" href="">sub menu 1</a>
-              							</li>
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ស្ថាប័នអនុវត្តលទ្ធកម្ម
+                                <!-- <span class="caret"></span> -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">ក្រសួង – ស្ថាប័នថ្នាក់កណ្តាល</a></li>
+                                  <li><a href="#">គ្រឹះស្ថានសាធារណៈ – សហគ្រាសសាធារណៈ</a></li>
+                                  <li><a href="#">រាជធានី​ – ខេត្ត</a></li>
+                                  
+                                </ul>
+                              </li>
 
-              						</ul>
-              					</li>
+                              <li ><a href="#">ការប្រគល់កិច្ចសន្យា<span class="sr-only">(current)</span></a></li>
 
-              				</ul>
-              	</div>
+                              <li ><a href="#">កិច្ចសន្យាផ្ទាល់<span class="sr-only">(current)</span></a></li>
+
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">អំពីស្ថាប័ន
+                                <!-- <span class="caret"></span> -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">តួនាទីអគ្គនាយកដ្ឋានលទ្ធកម្មសាធារណៈ</a></li>
+                                  <li><a href="#">រចនាសម្ព័ន្ធស្ថាប័ន</a></li>
+                                  <li><a href="#">រចនាសម្ព័ន្ធគ្រប់គ្រង</a></li>
+                                  
+                                </ul>
+                              </li>
+
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ច្បាប់ និង លិខិតគតិយុត្តិ
+                                <!-- <span class="caret"></span> -->
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">ច្បាប់</a></li>
+                                  <li><a href="#">ព្រះរាជក្រឹត្យ</a></li>
+                                  <li><a href="#">អនុក្រឹត្យ</a></li>
+                                  <li><a href="#">ព្រឹត្តិបត្រព័ត៌មាន</a></li>
+                                  <li><a href="#">ឯកសារផ្សេងៗ</a></li>
+
+                                  
+                                </ul>
+                              </li>
+
+                              <li>
+                                <a href="">ទំនាក់ទំនង</a>
+                              </li>
+
+
+                            </ul>
+                            
+                          
+                          </div><!-- /.navbar-collapse -->
+
+
+
+
+                        </div><!-- /.container-fluid -->
+                      </nav>
+
+              	<!-- </div> -->
               	<!-- /main-nav -->
 
               </div>
-              <!-- /main-header -->
-              <div class="main-content row col-md-12 ">
-              	<div class="content has-padding col-md-9">
-              		<%= yield %>
-              	</div>
-              	<div class="widget-right has-padding col-md-3 color-fore" >
-              			widget right
-              	</div>
+                <!-- /main-header -->
+                <!-- main Content -->
+                <div class="col-md-12 no-padding background-color-white ">
+                <div class="main-content ">
+                	
+                  <div class="content  col-md-8 body">
+                  
+                    <%= yield %>
+                 
+                	</div>
+                	
+                  <!-- widget right -->
+                  <div class=" right-sitebar has-padding col-md-4 color-fore" >
+                			<div class=" widget-box has-shadow ">
+                          <h2>មាតិការខាងស្តាំ</h2>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p>
+                          <p> helloworod </p><p> helloworod </p>
+                          <p> helloworod </p>
+                      </div>
+
+                      <div class=" widget-box has-shadow">
+                          <h2>មាតិការខាងស្តាំ</h2>
+                          <p> helloworod </p>
+                      </div>
+
+                      <div class=" widget-box has-shadow">
+                          <h2>មាតិការខាងស្តាំ</h2>
+                          <p> helloworod </p>
+                      </div>
+
+                      <div class="widget-box has-shadow">
+                          <h2>មាតិការខាងស្តាំ</h2>
+                          <p> helloworod </p>
+                      </div>
+
+
+                	</div>
+                </div>
+
               </div>
 
+
               <!-- Main footer -->
-              <div class="main-footer">
+              
+              <div class="main-footer col-md-12 no-padding">
 	              <!-- footer-top -->
 	              <div class="footer-top">
-	              	footer-top
+	              	<!-- footer-top -->
 	              </div>	
 	              <!-- /footer-top -->
               	<!-- footer-content -->
-              		<div class="footer-content background-color-3 has-padding">
-              			hello footer conntent
+              		<div class="footer-content background-color-fore has-padding col-md-12">
+              			<!-- widget box -->
+                    <div class="footer-widget-box widget-box col-md-3 ">
+                      <h2>ដំណឹងស្តីពីការដេញថ្លៃ</h2>
+                      <p ><a class="white-link-item" >ដំណឹងស្តីពីការដេញថ្លៃ</a></p>
+                      <p ><a class="white-link-item" >ផ្នែកទំនិញ និង សំភារៈ</a></p>
+                      <p ><a class="white-link-item" >ផ្នែកសំណង់និង ទំហែទាំ</a></p>
+                      <p ><a class="white-link-item" >ផ្នែកសេវាកម្ម និងពិគ្រោះយោបល់</a></p>
+                  
+                      
+                    </div>
+                    <!-- /widget box  -->
+
+                    <!-- widget box -->
+                    <div class="footer-widget-box widget-box col-md-3 ">
+                      <h2>ស្ថាប័នអនុវត្តលទ្ធកម្ម</h2>
+                      <p ><a class="white-link-item" >ស្ថាប័នអនុវត្តលទ្ធកម្ម</a></p>
+                      <p ><a class="white-link-item" >ក្រសួង – ស្ថាប័នថ្នាក់កណ្តាល</a></p>
+                      <p ><a class="white-link-item" >គ្រឹះស្ថានសាធារណៈ – សហគ្រាសសាធារណៈ</a></p>
+                      <p ><a class="white-link-item" >រាជធានី​ – ខេត្ត</a></p>
+                    </div>
+                    <!-- /widget box  -->
+
+                    <!-- widget box -->
+                    <div class="footer-widget-box widget-box col-md-3">
+                      <h2>អំពីស្ថាប័ន</h2>
+                      <p ><a class="white-link-item" >អំពីស្ថាប័ន</a></p>
+                      <p ><a class="white-link-item" >រចនាសម្ព័ន្ធស្ថាប័ន</a></p>
+                      <p ><a class="white-link-item" >តួនាទីអគ្គនាយកដ្ឋានលទ្ធកម្មសាធារណៈ</a></p>
+                      <p ><a class="white-link-item" >រចនាសម្ព័ន្ធគ្រប់គ្រង</a></p>
+                    </div>
+                    <!-- /widget box  -->
+                    <!-- widget box -->
+                    <div class="footer-widget-box widget-box col-md-3">
+                      <h2>ច្បាប់ និង លិខិតគតិយុត្តិ</h2>
+                      <p ><a class="white-link-item" >ច្បាប់ និង លិខិតគតិយុត្តិ</a></p>
+                      <p ><a class="white-link-item" >ច្បាប់</a></p>
+                      <p ><a class="white-link-item" >ព្រឹត្តិបត្រព័ត៌មាន</a></p>
+                      <p ><a class="white-link-item" >ព្រះរាជក្រឹត្យ</a></p>
+                      <p ><a class="white-link-item" >អនុក្រឹត្យ</a></p>
+                      <p ><a class="white-link-item" >ឯកសារផ្សេងៗ</a></p>
+                    </div>
+                    <!-- /widget box  -->
+
               		</div>
               	<!-- /footer-content -->
 
               	<!-- bottom-footer -->
-              		<div class="bottom-footer background-color-3 has-padding">
-              			bottom footer
+              		<div class="bottom-footer color-white background-color-3 has-padding col-md-12">
+              			រក្សាសិទ្ធិ ©២០១៤​ អគ្គនាយកដ្ឋានលទ្ធកម្មសាធារណៈ
               		</div>
               	<!-- /bottom-footer -->
 
               </div>
               <!-- /Main footer -->
 
-
-
               </div>
             </div>
-        </div>
     </div>
 </div>
 <!-- /container  -->

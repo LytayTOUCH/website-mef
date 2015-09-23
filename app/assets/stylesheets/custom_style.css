@@ -8,7 +8,6 @@
 }
 
 
-
 *{
 	/*color: #000;*/
 	font-family: 'khmer content';
@@ -131,7 +130,8 @@ ul, ol{
 }
 
 .color-fore{
-	color: #0D7C3E !important;
+	/*color: #0D7C3E !important;*/
+	color: #11502D !important;
 }
 .color-fore-2{
 	color: #75B842;
@@ -149,7 +149,10 @@ ul, ol{
 	color: red;
 }
 .background-color-fore{
-	background-color: #0D7C3E !important; 
+	/*background-color: #0D7C3E !important; */
+	background-color: #11502D !important; 
+	
+	@extend .color-white;
 }
 .background-color-2{
 	background-color: #75B842 !important;
@@ -235,6 +238,7 @@ display: block;
 	font-size: 15px;
 	font-weight: bold;
 	line-height: 30px;
+	font-weight: normal;
 }
 .footer-widget-box p{
 	margin-bottom: 2px !important;
@@ -295,4 +299,58 @@ li .dropdown-menu{
 .fixed{
 	position: fixed !important;
 	
+}
+
+.footer {
+  position: fixed;
+  bottom: 0 !important;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /*height: 60px;*/
+  background-color: #f5f5f5;
+  z-index: 999;
+}
+
+/*  list item */
+
+.list-item-box{
+	padding: 5px;
+	cursor: pointer;
+	padding-bottom: 14px;
+}
+.list-item-box:hover{
+	/*background: #dee;*/
+	/*@extend .background-color-fore;*/
+	@extend .color-fore;
+}
+.list-item-box .title{	
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 3px;
+}
+.list-item-box p{
+	font-size: 13px;
+	margin: 0px ;
+	line-height: 20px !important;
+
+}
+
+
+/*  All Title modify   */
+
+.content-main-title{
+	margin-top: 20px;
+	padding-top: 12px;
+	padding-bottom: 7px;
+	border-bottom: 2px solid green;
+	font-size:  20px;
+}
+.box-title{
+	margin-top: 13px;
+	font-size: 17px;
+	font-weight: bold;	
+}
+p{
+	text-align: left;
+	line-height: 25px;
 }

@@ -1,53 +1,104 @@
-<div class="table-responsive">
-<table  class="table table-bordered table-striped" >
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Entity</th>
-      <th>Exp Date</th>
-      <th>Budget Source</th>
-      <th>Attachment</th>
-      <th>Bidding Attachment</th>
-      <th>Action  </th>
-      <!-- <th colspan="3"></th> -->
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @announcements.each do |announcement| %>
-      <tr>
-        <td><%= announcement.title %></td>
-        <td><%= announcement.description %></td>
-        <td><%= announcement.entity %></td>
-        <td><%= announcement.bidding_expired_date %></td>
-        <td><%= announcement.budget_source %></td>
-        <td>
-          <% if announcement.attachment? %>
-            <%= link_to announcement.attachment_file_name, announcement.attachment.url, target: '_blank' %>
-          <% else %>
-            No attached file(s)
-          <% end %>
-        </td>
-         <td>
-         <% if announcement.attachment? %>
-           <%= link_to announcement.bidding_attachment_file_name, announcement.bidding_attachment.url, target: '_blank' %>
-          <% else %>
-            No attached file(s)
-          <% end %>
-         </td>
-        <td >
-        <div style="width: 50px ;">
-          <%= link_to '', announcement, class: 'fa fa-folder-open', title: 'Show' %>
-          <%= link_to '', edit_announcement_path(announcement), class: 'fa fa-edit', title: 'Edit'  %>
-          <%= link_to '', announcement, method: :delete, data: { confirm: 'Are you sure?' } , class: 'fa  fa-remove color-danger ', title: 'Delete' %>
-        </div>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!-- test -->
+<div class="slider-box" style="background: black; width:100%; height: 300px ; color:white; font-size:60px; " >
+    Slider box 
 </div>
-<br>
 
-<%= link_to 'New Announcement', new_announcement_path , class: 'btn btn-primary background-color-fore' %>
+<div class="row" >
+  <div class="col-md-12">
+    <p class="content-main-title">ដំណឹងដេញថ្លៃថ្មីៗ</p>
+    
+    <div class="row">
+        <div class="col-md-4" >
+          <p class="box-title">ដំណឹងដេញថ្លៃទី​១ </p>
+          <p>
+            ក្រសួង/ស្ថាប័ណ<br>
+            សេចក្តីជូនដំណឹងជាសាធារណៈ ស្តីពីការដាក់ឱ្យដេញថ្លៃផ្គត់ផ្គង់ថ្មរ M30 និងស៊ីម៉ង់សម្រាប់ឆមាស់ទី២ 
+          </p>
+          <a href="" class="btn btn-xs btn-primary background-color-fore">ទាញយកឯកសា </a>
+        </div>
+        <div class="col-md-4" >
+          <p class="box-title">ដំណឹងដេញថ្លៃទី​១ </p>
+          <p>
+             ក្រសួង/ស្ថាប័ណ<br>
+            សេចក្តីជូនដំណឹងជាសាធារណៈ ស្តីពីការដាក់ឱ្យដេញថ្លៃផ្គត់ផ្គង់ថ្មរ M30 និងស៊ីម៉ង់សម្រាប់ឆមាស់ទី២ 
+          </p>
+          <a href="" class="btn btn-xs btn-primary background-color-fore">ទាញយកឯកសា</a>
+        </div>
+        <div class="col-md-4" >
+          <p class="box-title">ដំណឹងដេញថ្លៃទី​១ </p>
+          <p>
+             ក្រសួង/ស្ថាប័ណ<br>
+            សេចក្តីជូនដំណឹងជាសាធារណៈ ស្តីពីការដាក់ឱ្យដេញថ្លៃផ្គត់ផ្គង់ថ្មរ M30 និងស៊ីម៉ង់សម្រាប់ឆមាស់ទី២ 
+          </p>
+          <a href="" class="btn btn-xs btn-primary background-color-fore">ទាញយកឯកសា </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" >
+          <p class="box-title">ដំណឹងដេញថ្លៃទី​១ </p>
+          <p>
+            ក្រសួង/ស្ថាប័ណ<br>
+            សេចក្តីជូនដំណឹងជាសាធារណៈ ស្តីពីការដាក់ឱ្យដេញថ្លៃផ្គត់ផ្គង់ថ្មរ M30 និងស៊ីម៉ង់សម្រាប់ឆមាស់ទី២ 
+          </p>
+          <a href="" class="btn btn-xs btn-primary  background-color-fore">ទាញយកឯកសា </a>
+        </div>
+
+        <div class="col-md-4" >
+          <p class="box-title">ដំណឹងដេញថ្លៃទី​១ </p>
+          <p>
+             ក្រសួង/ស្ថាប័ណ<br>
+            សេចក្តីជូនដំណឹងជាសាធារណៈ ស្តីពីការដាក់ឱ្យដេញថ្លៃផ្គត់ផ្គង់ថ្មរ M30 និងស៊ីម៉ង់សម្រាប់ឆមាស់ទី២ 
+          </p>
+          <a href="" class="btn btn-xs btn-primary background-color-fore">ទាញយកឯកសា</a>
+        </div>
+        <div class="col-md-4" >
+          <p class="box-title">ដំណឹងដេញថ្លៃទី​១ </p>
+          <p>
+             ក្រសួង/ស្ថាប័ណ<br>
+            សេចក្តីជូនដំណឹងជាសាធារណៈ ស្តីពីការដាក់ឱ្យដេញថ្លៃផ្គត់ផ្គង់ថ្មរ M30 និងស៊ីម៉ង់សម្រាប់ឆមាស់ទី២ 
+          </p>
+          <a href="" class="btn btn-xs  btn-primary background-color-fore">ទាញយកឯកសា</a>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p class="content-main-title">ច្បាប់និង លិខិតកតិយុទ្ធ</p> 
+    <br>
+    <div class="row" >
+
+      <div class="col-md-3" style="text-align: center;" >
+        <img src="" width="100%" height="200px"  >
+        <p class="box-title text-center ">ច្បាប់និងកតិយុទ្ធ ១</p>
+        <a href="#">Download </a>
+      </div>
+
+      <div class="col-md-3" style="text-align: center;" >
+        <img src="" width="100%" height="200px"  >
+        <p class="box-title text-center">ច្បាប់និងកតិយុទ្ធ ១</p>
+        <a href="#">Download </a>
+      </div>
+
+      <div class="col-md-3" style="text-align: center;" >
+        <img src="" width="100%" height="200px"  >
+        <p class="box-title text-center">ច្បាប់និងកតិយុទ្ធ ១</p>
+        <a href="#">Download </a>
+      </div>
+
+      <div class="col-md-3" style="text-align: center;" >
+        <img src="" width="100%" height="200px"  >
+        <p class="box-title text-center">ច្បាប់និងកតិយុទ្ធ ១</p>
+        <a href="#">Download </a>
+      </div>
+     
+
+    </div>
+  </div>
+</div>
+
+
+<br>
+<!-- /.test  -->

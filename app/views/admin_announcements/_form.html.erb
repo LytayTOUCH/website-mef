@@ -1,0 +1,64 @@
+<%= simple_form_for(@admin_announcement, url: url ) do |f| %>
+      <% if @admin_announcement.errors.any? %>
+        <div id="error_explanation">}
+          <h2><%= pluralize(@admin_announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
+
+          <ul>
+          <% @admin_announcement.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+<div class="row" >
+  
+    <div class="col-md-6" >
+      <div class="row" >
+        <div class="col-md-12" >
+          <!-- column -->
+          <%= f.input :title, label: 'Title' %>
+        </div>
+        <div class="col-md-12" >
+          <!-- column -->
+          <%= f.input :entity, label: 'Entity' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" >
+      <!-- col-6 -->
+      <%= f.input :description, label: 'Description', :as => :text,  :input_html => {  :rows => 4, :style => 'height: 108px;' } %>
+    </div>
+  
+</div>
+
+<div class="row" >
+  
+    <div class="col-md-6" >
+      <!-- column -->
+       <%= f.input :bidding_expired_date, label: 'Bidding Expired Date', as: :date_picker %>
+    </div>
+    <div class="col-md-6" >
+      <!-- column -->
+      <%= f.input :budget_source, label: 'Budget Source' %>
+    </div>
+  
+</div>
+
+<div class="row" >
+  
+    <div class="col-md-6" >
+      <!-- column -->
+      <%= f.input :attachment, label: 'Attachment File', as: :file %>
+    </div>
+    <div class="col-md-6" >
+      <!-- column -->
+      <%= f.input :bidding_attachment, label: 'Bidding Attachment File', as: :file %>
+    </div>
+  
+</div>
+
+
+      <%= f.button :submit, label: 'Create Announcement', class: 'btn btn-primary background-color-fore' %>
+    <% end %>
+

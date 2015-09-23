@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mefsite</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="shortcut icon" href="/assets/favicon.ico" title="Favicon" />
+</head>
+<body>
+<!-- containner -->
+<div class="container"> 
+    <div class="row has-shadow  ">
+      <!-- main-container -->
+      <div class="main-container" >
+        <!-- main-header -->
+          <%= render partial: 'main_header' %>
+        <!-- /main-header -->
+        <!-- navigator -->
+          <%= render partial: 'navigator' %>
+        <!-- /.navigator -->
+
+              <!-- full width content -->
+              <div class="col-md-12 no-padding background-color-white ">
+                <!-- main content -->
+                <div class="main-content ">
+                  <!-- content -->  	
+                  <div class="content  col-md-9 body">
+                    
+                    <%= yield %>
+                    
+                  </div>
+                  <!-- /.content -->
+                    	
+                  <!-- right sitebar -->
+                  <%= render partial: 'right_sitebar' %>
+                  <!-- /.right sitebar -->
+
+                </div>
+                <!-- /.main content -->
+              </div>
+              <!-- /.full width content  -->
+
+        <!-- main footer -->
+          <%= render partial: 'main_footer' %>
+        <!-- /.main footer -->
+      </div>
+      <!-- /.main container  -->
+    </div>
+   
+</div>
+<!-- /container  -->
+</body>
+</html>

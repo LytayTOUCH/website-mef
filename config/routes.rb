@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'announcements/public_service'
+  get 'announcements/question_answer'
+  get 'announcements/contact'
+
   devise_for :users
   resources :admin_announcements
   resources :announcements
@@ -9,6 +13,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'announcements#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

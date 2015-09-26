@@ -111,6 +111,11 @@ ul, ol{
 
 /* over load style config */
 
+.cursor-pointer{
+	cursor: pointer;
+}
+
+	
 /*
 
 */
@@ -148,6 +153,10 @@ ul, ol{
 .color-danger{
 	color: red;
 }
+.color-hover:hover{
+	@extend .color-fore;
+}
+
 .background-color-fore{
 	/*background-color: #0D7C3E !important; */
 	background-color: #11502D !important; 
@@ -164,8 +173,9 @@ ul, ol{
 	background-color: #fff !important;
 }
 
-
-
+.background-hover:hover{
+	background-color: #75B842 ;
+}
 
 
 /* Menu Style */

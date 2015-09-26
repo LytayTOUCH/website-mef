@@ -5,9 +5,20 @@ class AnnouncementsController < ApplicationController
   
   # we can use (layout "layout_name", except: [:method, :method])
 
-
   def index
     # @announcements = Announcement.all
+  end
+
+  def public_service
+    
+  end
+
+  def question_answer
+    
+  end
+
+  def contact
+    
   end
 
 end

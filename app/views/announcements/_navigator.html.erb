@@ -15,9 +15,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">ទំព័រដើម<span class="sr-only">(current)</span></a></li>
-            
-
+            <li >
+              <%= link_to root_path do %>
+                ទំព័រដើម
+              <% end %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ស្ថាប័នអនុវត្តលទ្ធកម្ម
               <span class="caret"></span>
@@ -32,7 +33,12 @@
 
             <li ><a href="#">ទាញយកឯកសា<span class="sr-only">(current)</span></a></li>
 
-            <li ><a href="#">សេវាសាធារណៈ<span class="sr-only">(current)</span></a></li>
+            <li >
+              <%= link_to announcements_public_service_path do %>
+                សេវាសាធារណៈ
+                <span class="sr-only">(current)</span>
+              <% end %>
+            </li>
 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">អំពីស្ថាប័ន
@@ -48,10 +54,12 @@
 
 
             <li>
-              <a href="">ទំនាក់ទំនង</a>
+              <!-- <a href="">ទំនាក់ទំនង</a> -->
+              <%= link_to "ទំនាក់ទំនង", announcements_contact_path %>
             </li>
-            <li>
-              <a href="">សំណួរចម្លើយ</a>
+            <li >
+              
+              <%= link_to "សំណួរចម្លើយ", announcements_question_answer_path %>
             </li>
 
 

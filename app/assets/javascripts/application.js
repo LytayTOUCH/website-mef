@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.bootstrap3
 //= require turbolinks
 //= require_tree .
 
@@ -21,11 +23,11 @@
 //= require pickers
 
 
-//= require dataTables/jquery.dataTables
-
 
 // This Javascript is for datetime.picker
 $(document).on('ready page:change', function() {
+  $('.is-data-table').DataTable();
+
   $('.datetimepicker').datetimepicker({
     // put here your custom picker options, that should be applied for all pickers
   });
@@ -54,5 +56,11 @@ $(document).on('ready page:change', function() {
       else
         range1.data("DateTimePicker").maxDate(false);
     });
-  })
+  });
+
+ 
+
+ 
+
 });
+

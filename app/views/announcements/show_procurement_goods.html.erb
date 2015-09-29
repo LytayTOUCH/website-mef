@@ -1,0 +1,43 @@
+<div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Data Table With Full Features</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <table id="my_datatable" class="table is-data-table datatable">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>ឈ្មោះលទ្ធកម្ម</th>
+                        <th>ស្ថាប័ន</th>
+                        <th>ផែនការលទ្ធកម្ម</th>
+                        <th>ឆ្នាំ</th>
+                        <th><i class="fa fa-download" ></i> </th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <%
+                      $i = 1
+                      $max = 100
+                      while $i< $max do
+                      %>
+                        <tr>
+                          <td><%= $i %></td>
+                          <td><%= "លទ្ធកម្មទី #{$i}" %></td>
+                          <td><%= "ស្ថាប័នទី #{$i}" %></td>
+                          <td><%= "លទ្ធកម្មទី #{$i}" %></td>
+                          <td><%= "លទ្ធកម្មទី #{$i}" %></td>
+                          
+                          <td><%= link_to 'ទាញយក', '' %></td>
+                        </tr>
+                      <%
+                      $i +=1
+                      end
+
+                      %>
+
+                    </tbody>
+                    
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->

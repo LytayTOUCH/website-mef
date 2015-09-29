@@ -26,7 +26,9 @@
                 <div class="main-content ">
                   <!-- content -->  	
                   <div class="content  col-md-8 body">
-                    
+                    <div class="has-padding has-shadow" style="margin-bottom:10px;" >
+                      <b><%= " #{request.original_fullpath }"  %></b>
+                    </div>
                     <%= yield %>
                     
                   </div>

@@ -259,6 +259,10 @@ display: block;
 	text-align: justify;
 
 }
+.widget-box ul li a{
+	@extend p;
+	text-decoration: none;
+}
 
 .right-sitebar .widget-box{
 	

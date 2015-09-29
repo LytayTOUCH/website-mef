@@ -1,4 +1,4 @@
-	</div>
+
     <nav class="navbar navbar-default background-color-fore ">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,69 +9,79 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li >
-              <%= link_to root_path do %>
-                ទំព័រដើម
-              <% end %>
+              <%= link_to 'ទំព័រដើម', root_path  %>
+            </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ស្ថាប័នអនុវត្តលទ្ធកម្ម
-              <span class="caret"></span>
-              </a>
+              <%= link_to '', class: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false'   do %>
+                ស្ថាប័នអនុវត្តលទ្ធកម្ម
+                <span class="caret"></span>
+              <% end %>
+
               <ul class="dropdown-menu">
-                <li><a href="#">ក្រសួង – ស្ថាប័នថ្នាក់កណ្តាល</a></li>
-                <li><a href="#">គ្រឹះស្ថានសាធារណៈ – សហគ្រាសសាធារណៈ</a></li>
-                <li><a href="#">រាជធានី​ – ខេត្ត</a></li>
-                
+                <li><%= link_to 'ក្រសួង – ស្ថាប័នថ្នាក់កណ្តាល', announcements_show_procurement_entity_ministry_path %>
+                </li>
+                <li><%= link_to 'គ្រឹះស្ថានសាធារណៈ – សហគ្រាសសាធារណៈ', announcements_show_procurement_entity_public_foundation_path  %>
+                </li>
+                <li><%= link_to 'រាជធានី​ – ខេត្ត', announcements_show_procurement_entity_city_province_path %>
+                </li>
               </ul>
             </li>
 
-            <li ><a href="#">ទាញយកឯកសា<span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <%= link_to '', class: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false'   do %>
+                ទាញយកឯកសា
+                <span class="caret"></span>
+              <% end %>
+
+              <ul class="dropdown-menu">
+                <li><%= link_to 'ឯកសាដេញថ្លៃ', announcements_show_bidder_list_registrative_form_path %>
+                </li>
+                <li><%= link_to 'ពាក្យសុំចុះបញ្ជីដេញថ្លៃ', announcements_show_bidding_document_path  %>
+                </li>
+                <li><%= link_to 'ពាក្យសុំអនុម័តផែនការ និងផែនការលទ្ធកម្មកែតម្រូវ', announcements_show_planning_approval_correction_path %>
+                </li>
+              </ul>
+            </li>
 
             <li >
-              <%= link_to announcements_public_service_path do %>
+              <%= link_to announcements_show_public_service_path do %>
                 សេវាសាធារណៈ
                 <span class="sr-only">(current)</span>
               <% end %>
             </li>
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">អំពីស្ថាប័ន
-              <span class="caret"></span>
-              </a>
+              <%= link_to '', class: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false'   do %>
+                អំពីស្ថាប័ន
+                <span class="caret"></span>
+              <% end %>
               <ul class="dropdown-menu">
-                <li><a href="#">តួនាទីអគ្គនាយកដ្ឋានលទ្ធកម្មសាធារណៈ</a></li>
-                <li><a href="#">រចនាសម្ព័ន្ធស្ថាប័ន</a></li>
-                <li><a href="#">រចនាសម្ព័ន្ធគ្រប់គ្រង</a></li>
+                <li>
+                  <%= link_to 'តួនាទីអគ្គនាយកដ្ឋានលទ្ធកម្មសាធារណៈ', announcements_show_gdpp_role_path %>
+                </li>
+                <li>
+                  <%= link_to 'រចនាសម្ព័ន្ធស្ថាប័ន', announcements_show_gdpp_structure_path %>
+                </li>
                 
               </ul>
             </li>
 
-
             <li>
               <!-- <a href="">ទំនាក់ទំនង</a> -->
-              <%= link_to "ទំនាក់ទំនង", announcements_contact_path %>
+              <%= link_to "ទំនាក់ទំនង", announcements_show_contact_path %>
             </li>
             <li >
               
-              <%= link_to "សំណួរចម្លើយ", announcements_question_answer_path %>
+              <%= link_to "សំណួរចម្លើយ", announcements_show_question_answer_path %>
             </li>
-
-
           </ul>
           
-        
         </div><!-- /.navbar-collapse -->
-
-
-
       </div><!-- /.container-fluid -->
     </nav>
 
-<!-- </div> -->
-<!-- /main-nav -->

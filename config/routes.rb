@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
   
-  get 'announcements/public_service'
-  get 'announcements/question_answer'
-  get 'announcements/contact'
+  get 'announcements/show_public_service'
+  get 'announcements/show_question_answer'
+  get 'announcements/show_contact'
+
+  get 'announcements/show_procurement_entity_city_province'
+  get 'announcements/show_procurement_entity_ministry'
+  get 'announcements/show_procurement_entity_public_foundation'
+
+  get 'announcements/show_bidder_list_registrative_form'
+  get 'announcements/show_bidding_document'
+  get 'announcements/show_planning_approval_correction'
+
+  get 'announcements/show_gdpp_role'
+  get 'announcements/show_gdpp_structure'
+
+  get 'announcements/show_procurement_goods'
 
   devise_for :users
   resources :admin_announcements

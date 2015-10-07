@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  devise_for :administrators
+  get 'gdpp-admin/login' => 'administrator#index'
+
+  get 'administrator/home'
+
   get 'announcements/show_public_service'
   get 'announcements/show_question_answer'
   get 'announcements/show_contact'

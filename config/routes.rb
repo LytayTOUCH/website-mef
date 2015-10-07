@@ -17,7 +17,6 @@ Rails.application.routes.draw do
 
   get 'announcements/show_procurement_goods'
 
-  devise_for :users
   resources :admin_announcements
   resources :announcements
   

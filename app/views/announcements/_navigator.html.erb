@@ -32,22 +32,6 @@
               </ul>
             </li>
 
-            <li class="dropdown">
-              <%= link_to '', class: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false'   do %>
-                ទាញយកឯកសា
-                <span class="caret"></span>
-              <% end %>
-
-              <ul class="dropdown-menu">
-                <li><%= link_to 'ឯកសាដេញថ្លៃ', announcements_show_bidder_list_registrative_form_path %>
-                </li>
-                <li><%= link_to 'ពាក្យសុំចុះបញ្ជីដេញថ្លៃ', announcements_show_bidding_document_path  %>
-                </li>
-                <li><%= link_to 'ពាក្យសុំអនុម័តផែនការ និងផែនការលទ្ធកម្មកែតម្រូវ', announcements_show_planning_approval_correction_path %>
-                </li>
-              </ul>
-            </li>
-
             <li >
               <%= link_to announcements_show_public_service_path do %>
                 សេវាសាធារណៈ

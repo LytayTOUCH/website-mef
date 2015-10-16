@@ -52,6 +52,8 @@ gem "font-awesome-rails"
 
 gem 'jquery-datatables-rails', '~> 1.12.2'
 
+# slide show
+gem 'owlcarousel-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

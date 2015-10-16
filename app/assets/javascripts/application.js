@@ -22,6 +22,7 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 
+//= require owl.carousel
 
 
 // This Javascript is for datetime.picker
@@ -58,9 +59,18 @@ $(document).on('ready page:change', function() {
     });
   });
 
- 
 
- 
+  $("#slideshow1").owlCarousel({
+    autoPlay : 3000,
+    navigation : false, // Show next and prev buttons
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true,
+    stopOnHover : true,
+
+    autoHeight : true
+  });
+
 
 });
 

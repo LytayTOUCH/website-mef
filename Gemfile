@@ -55,6 +55,9 @@ gem 'jquery-datatables-rails', '~> 1.12.2'
 # slide show
 gem 'owlcarousel-rails'
 
+# pagination
+gem 'will_paginate', '~> 3.0.6'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

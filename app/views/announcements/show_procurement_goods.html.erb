@@ -1,35 +1,39 @@
+<div class="has-padding has-shadow" style="margin-bottom:10px;" >
+  <b><%= "Bidding Advertisment "  %></b>
+</div>
+<br>
 <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">Data Table With Full Features</h3>
-                </div><!-- /.box-header -->
                 <div class="box-body">
-                  <table id="my_datatable" class="table is-data-table datatable">
+                  <table border="1" id="my_datatable" class="table is-data-table" style="font-size: 13px;" >
                     <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>ឈ្មោះលទ្ធកម្ម</th>
-                        <th>ស្ថាប័ន</th>
-                        <th>ផែនការលទ្ធកម្ម</th>
-                        <th>ឆ្នាំ</th>
-                        <th><i class="fa fa-download" ></i> </th>
-
+                      <tr style="height: 60px;" >
+                        <th style="vertical-align:middle" >#</th>
+                        <th style="vertical-align:middle" >បរិយាយអំពីការដេញថ្លៃ</th>
+                        <th style="vertical-align:middle" width="170px" >ស្ថាប័នអនុវត្តិលទ្ធកម្ម</th>
+                        <th style="vertical-align:middle" >ប្រភពមូលនិធិ</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody  >
+
                       <%
                       $i = 1
                       $max = 100
                       while $i< $max do
                       %>
-                        <tr>
-                          <td><%= $i %></td>
-                          <td><%= "លទ្ធកម្មទី #{$i}" %></td>
-                          <td><%= "ស្ថាប័នទី #{$i}" %></td>
-                          <td><%= "លទ្ធកម្មទី #{$i}" %></td>
-                          <td><%= "លទ្ធកម្មទី #{$i}" %></td>
-                          
-                          <td><%= link_to 'ទាញយក', '' %></td>
-                        </tr>
+
+                        <tr  >
+                          <td style="vertical-align: middle; text-align:center"><%= $i %></td>
+                          <td style="line-height: 24px;" >
+                          <%= link_to "សេចក្តីជូនដំណឹងជាសាធារណៈស្តីពីការដាក់ឲ្យដេញថ្លៃផ្គត់ផ្គង់ ឧបករណ៍ប្រព័ន្ធត្រួតពិនិត្យសម្ពាធចំនួន៥គ្រឿង" , "" %><br>
+                          <%= "សេចក្តីជូនដំណឹង៖" %>[<%= link_to "ភាសាខ្មែរ", "" %>]
+                          <br>
+                          <%= "ដំណឹងដេញថ្លៃ៖" %>[<%= link_to "ភាសាខ្មែរ", "" %>]
+                          <br>
+                          <i><%= "Last updated on July 14, 2014" %></i>
+                          </td>
+                          <td style="vertical-align:middle; line-height: 24px;" ><%= "រដ្ឋាករទឹកស្វយ័តក្រុងភ្នំពេញ" %></td>
+                          <td style="vertical-align:middle; line-height: 24px;" ><%= "ថវិការបស់រដ្ឋាករទឹកស្វយ័តក្រុងភ្នំពេញ" %></td>
+
                       <%
                       $i +=1
                       end

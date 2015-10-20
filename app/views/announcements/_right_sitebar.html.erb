@@ -1,26 +1,27 @@
 <div class=" right-sitebar has-padding col-md-4 color-fore" >
-    <!-- <div class=" widget-box has-shadow color-black ">
-        <h2>សេចក្ដីជូនដំណឹងស្តីពីការដេញថ្លៃថ្មីៗ</h2>
-            
-            <div class="list-item-box" >
-                <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
-                <p class="after-title" >សំណង់ 01-07-2015</p>
-            </div>
-            <div class="list-item-box" >
-                <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
-                <p class="after-title" >សំណង់ 01-07-2015</p>
-            </div>
-            <div class="list-item-box" >
-                <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
-                <p class="after-title" >សំណង់ 01-07-2015</p>
-            </div>
-            <div class="list-item-box" >
-                <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
-                <p class="after-title" >សំណង់ 01-07-2015</p>
-            </div>
-
-    </div>
- -->
+    <% if  !request.fullpath.end_with?("/","/announcements") %>
+        <div class=" widget-box has-shadow color-black ">
+            <h2>សេចក្ដីជូនដំណឹងស្តីពីការដេញថ្លៃថ្មីៗ</h2>
+                
+                <div class="list-item-box" >
+                    <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
+                    <p class="after-title" >សំណង់ 01-07-2015</p>
+                </div>
+                <div class="list-item-box" >
+                    <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
+                    <p class="after-title" >សំណង់ 01-07-2015</p>
+                </div>
+                <div class="list-item-box" >
+                    <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
+                    <p class="after-title" >សំណង់ 01-07-2015</p>
+                </div>
+                <div class="list-item-box" >
+                    <p class="title" >សេចក្តីប្រកាស់ទី១ </p>
+                    <p class="after-title" >សំណង់ 01-07-2015</p>
+                </div>
+        </div>
+        
+    <% end %>
     <div class=" widget-box has-shadow">
         <h2>ដំណឹងស្តីពីការដេញថ្លៃ</h2>
         <ul style="list-style:none">
@@ -32,28 +33,34 @@
     </div>
 
     <div class=" widget-box has-shadow">
-        <h2>ផែនការលទ្ធកម្ម</h2>
-        <p> ផែនការលទ្ធកម្មដើមឆ្នាំ </p>
-        <p> ផែនការលទ្ធកម្មកែតម្រូវ </p>
-    </div>
+      <h2>ផែនការលទ្ធកម្ម</h2>
+      
+      <ul style="list-style:none" >
+        <li> <%= link_to "ផែនការលទ្ធកម្មដើមឆ្នាំ ", '#' %></li>
+        <li> <%= link_to "ផែនការលទ្ធកម្មកែតម្រូវ", '#' %></li>
+      </ul> 
 
+    </div>
+    <% if  !request.fullpath.end_with?("/","/announcements") %>
     <div class="widget-box has-shadow">
-        <h2>ច្បាប់និងលិខិតកត្តិយុទ្ធ</h2>
-        <p> ច្បាប់ </p>
-        <p> ព្រះរាជក្រិត្រ </p>
-        <p> ប្រកាស់</p>
-        <p> ឯកសាផ្សេងៗ </p>
+      <h2>ច្បាប់និងលិខិតកត្តិយុទ្ធ</h2>
+      
+      <ul style="list-style:none" >
+        <li> <%= link_to "ច្បាប់ ", '#' %></li>
+        <li> <%= link_to "ព្រះរាជក្រិត្រ", '#' %></li>
+        <li> <%= link_to "ប្រកាស់", '#' %></li>
+        <li> <%= link_to "ឯកសាផ្សេងៗ", '#' %></li>
+      </ul> 
         
     </div>
-
+    <% end %>
     <div class="widget-box has-shadow">
-        <h2>ការប្រគល់ឯកសា</h2>
-        <p> អ.ដ.ប</p>
-        <p> អ.ដ.ប</p>
-        <p> អ.ដ.ប</p>
-        <p> អ.ដ.ប</p>
-
-        
-        
+      <h2> <%= "ការប្រគល់កិច្ចសន្យា" %> </h2>
+      <ul style="list-style:none" >
+        <li> <%= link_to "ដេញថ្លៃដោយប្រកួតប្រជែងជាអន្តរជាតិ", '#' %> </li>
+        <li> <%= link_to "ពិគ្រោះថ្លៃ", '#' %></li>
+        <li> <%= link_to "ស្ទង់តម្លៃ", '#' %></li>
+      </ul>  
     </div>
+
 </div>

@@ -1,9 +1,43 @@
 Rails.application.routes.draw do
-  
-  devise_for :administrators
-  get 'gdpp-admin/login' => 'administrator#index'
 
-  get 'administrator/home'
+  devise_for :administrators, skip: [:sessions, :passwords, :confirmations, :registrations]
+  as :administrator do
+    # get 'administrator/login' => 'devise/sessions#new', as: :administrator_login
+    # delete 'administrator/logout' => 'devise/sessions#destroy', as: :administrator_logout
+
+    # session handling
+    scope '/gdpp-admin' do
+
+      get     '/login'  => 'devise/sessions#new',     as: 'new_administrator_session'
+      post    '/login'  => 'devise/sessions#create',  as: 'administrator_session'
+      delete  '/logout' => 'devise/sessions#destroy', as: 'destroy_administrator_session'
+
+      # joining
+      get   '/join' => 'devise/registrations#new',    as: 'new_administrator_registration'
+      post  '/join' => 'devise/registrations#create', as: 'administrator_registration'
+
+    end
+    scope '/account' do
+      # password reset
+      get   '/reset-password'        => 'devise/passwords#new',    as: 'new_administrator_password'
+      put   '/reset-password'        => 'devise/passwords#update', as: 'administrator_password'
+      post  '/reset-password'        => 'devise/passwords#create'
+      get   '/reset-password/change' => 'devise/passwords#edit',   as: 'edit_administrator_password'
+      # confirmation
+      get   '/confirm'        => 'devise/confirmations#show',   as: 'administrator_confirmation'
+      post  '/confirm'        => 'devise/confirmations#create'
+      get   '/confirm/resend' => 'devise/confirmations#new',    as: 'new_administrator_confirmation'
+      # settings & cancellation
+      get '/cancel'   => 'devise/registrations#cancel', as: 'cancel_administrator_registration'
+      get '/settings' => 'devise/registrations#edit',   as: 'edit_administrator_registration'
+      put '/settings' => 'devise/registrations#update'
+      # account deletion
+      delete '' => 'devise/registrations#destroy'
+    end
+  end
+
+  get 'administrator/index', as: 'administrator_index'
+  get 'administrator/home', as: 'administrator_home'
 
   get 'announcements/show_public_service'
   get 'announcements/show_question_answer'
@@ -24,7 +58,7 @@ Rails.application.routes.draw do
 
   resources :admin_announcements
   resources :announcements
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
